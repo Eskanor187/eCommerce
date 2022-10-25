@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}{% endblock %}
+    </title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-nav container">
+            <a href="#!" class="navbar-nav-logo">
+                <img src="{% static 'images/logo.jpg' %}" alt="">
+                <span>CINEMAS</span>
+            </a>
+            <ul class="navbar-nav-list">
+                <li><a href="#!">Films</a></li>
+                <li><a href="#!">Serials</a></li>
+                <li><a href="#!">Cartoons</a></li>
+                <li><a href="#!">Collections</a></li>
+            </ul>
+            
+            <button class="navbar-nav-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
